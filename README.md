@@ -1,7 +1,14 @@
+# Amazon 2.0
+
+1. Next.Js
+2. NextAuth (Google Login)
+3. Tailwind CSS
+4. Firebase (Firestore)
+5. Stripe (Payment)
+   
 # Installation Steps
-
-
-
+# 1. Install the latest version of Node.js
+# 2. Install the latest version of npm
 ## Using npm
 
 Run commands
@@ -21,8 +28,3 @@ Run commands
 2) ```yarn install```
 
 3) ```yarn run dev```
-
-
-### If you see the window below then you are set to build AMAZON 2.0!
-
-![Template Screenshot](TemplateScreenshot.jpg?raw=true "Template Screenshot")
