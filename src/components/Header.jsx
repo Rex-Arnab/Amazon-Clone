@@ -32,15 +32,15 @@ function Header() {
 
         {/* Right */}
         <div className="text-white flex items-center text-xs space-x-6 mx-6 whitespace-nowrap">
-          <div>
+          <div className="link">
             <p>Hello, Sign In</p>
             <p className="font-extrabold md:text-sm">Account & Lists</p>
           </div>
-          <div>
+          <div className="link">
             <p>Returns</p>
             <p className="font-extrabold md:text-sm">& Orders</p>
           </div>
-          <div>
+          <div className="link">
             <ShoppingCartIcon className="h-10" />
             <p className="font-extrabold md:text-sm hidden md:inline mt-2">
               Basket
