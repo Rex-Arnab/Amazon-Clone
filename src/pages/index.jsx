@@ -20,7 +20,7 @@ export default function Home() {
         <Banner />
 
         {/* Product Feed */}
-        <ProductFeed products={products} />
+        {products && <ProductFeed products={products} />}
       </main>
     </div>
   );
