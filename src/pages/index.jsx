@@ -5,6 +5,7 @@ import ProductFeed from "../components/ProductFeed";
 import products from "../products.json";
 
 export default function Home() {
+
   return (
     <div className="bg-gray-100">
       <Head>
