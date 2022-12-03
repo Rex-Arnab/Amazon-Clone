@@ -3,8 +3,9 @@
 1. Next.Js
 2. NextAuth (Google Login)
 3. Tailwind CSS
-4. Firebase (Firestore)
+4. Firebase (Firestore, Authentication)
 5. Stripe (Payment)
+6. Sementic HTML
    
 # Installation Steps
 # 1. Install the latest version of Node.js

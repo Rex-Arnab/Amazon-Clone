@@ -2,12 +2,27 @@ import Image from "next/legacy/image";
 import { useState } from "react";
 import { StarIcon } from "@heroicons/react/solid";
 import Currency from "react-currency-formatter";
-
-let MAX_RATING = 5;
-let MIN_RATING = 1;
+import { useDispatch } from "react-redux";
+import { addToBasket } from "../slices/basketSlice";
 
 function Product({ id, title, price, description, category, image, rating }) {
   const [hasPrime] = useState(rating.rate > 3.5);
+  const dispatch = useDispatch();
+  const addItemToBasket = () => {
+    // Add item to basket...
+    const product = {
+      id,
+      title,
+      price,
+      description,
+      category,
+      image,
+      rating,
+    };
+
+    // Sending the product as an action to the REDUX store... the basket slice
+    dispatch(addToBasket(product));
+  };
   return (
     <div className="relative flex flex-col m-5 bg-white z-30 p-10">
       <p className="absolute top-2 right-2 text-xs italic text-gray-400">
@@ -33,7 +48,9 @@ function Product({ id, title, price, description, category, image, rating }) {
         </div>
       )}
 
-      <button className="mt-auto button">Add to Basket</button>
+      <button onClick={addItemToBasket} className="mt-auto button">
+        Add to Basket
+      </button>
     </div>
   );
 }
