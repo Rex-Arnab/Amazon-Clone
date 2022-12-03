@@ -17,7 +17,7 @@ function Header() {
     <nav>
       {/* Top Nav */}
       <div className="flex items-center bg-amazon_blue p-1 flex-grow py-2">
-        <div className="mt-2 flex items-center flex-grow-0 md:flex-grow ">
+        <div className="mt-2 px-2 flex items-center flex-grow-0 md:flex-grow">
           <Image
             onClick={() => router.push("/")}
             src="https://links.papareact.com/f90"
