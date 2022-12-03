@@ -1,6 +1,6 @@
 module.exports = {
     images: {
         domains: ['links.papareact.com', 'fakestoreapi.com'],
-        unoptimized: true,
+        unoptimized: false,
     },
 }
