@@ -18,6 +18,7 @@ function Product({ id, title, price, description, category, image, rating }) {
       category,
       image,
       rating,
+      hasPrime,
     };
 
     // Sending the product as an action to the REDUX store... the basket slice
