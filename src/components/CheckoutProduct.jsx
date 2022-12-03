@@ -1,6 +1,8 @@
 import Image from "next/legacy/image";
 import React from "react";
 import Currency from "react-currency-formatter";
+import { useDispatch } from "react-redux";
+import { addToBasket, removeFromBasket } from "../slices/basketSlice";
 
 function CheckoutProduct({
   id,
@@ -12,6 +14,23 @@ function CheckoutProduct({
   rating,
   hasPrime,
 }) {
+  const dispatch = useDispatch();
+
+  const addItemToBasket = () => {
+    // Add item to basket...
+    const product = {
+      id,
+      title,
+      price,
+      description,
+      category,
+      image,
+      rating,
+      hasPrime,
+    };
+    // Sending the product as an action to the REDUX store... the basket slice
+    dispatch(addToBasket(product));
+  };
   return (
     <div className="grid grid-cols-5">
       <Image src={image} height={200} width={200} objectFit="contain" />
@@ -30,9 +49,10 @@ function CheckoutProduct({
         {hasPrime && (
           <div className="flex items-center space-x-2">
             <img
+              loading="lazy"
               className="w-12"
               src="https://links.papareact.com/fdw"
-              alt=""
+              alt="prime logo"
             />
             <p className="text-xs text-gray-500">FREE Next-day Delivery</p>
           </div>
@@ -40,7 +60,15 @@ function CheckoutProduct({
       </div>
       {/* Right add/remove buttons */}
       <div className="flex flex-col space-y-2 my-auto justify-self-end">
-        <button className="button">Remove from Basket</button>
+        <button className="button" onClick={addItemToBasket}>
+          Add to Basket
+        </button>
+        <button
+          className="button"
+          onClick={() => dispatch(removeFromBasket({ id }))}
+        >
+          Remove from Basket
+        </button>
       </div>
     </div>
   );
