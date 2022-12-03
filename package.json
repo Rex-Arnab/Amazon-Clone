@@ -16,9 +16,9 @@
     "firebase": "^8.6.1",
     "firebase-admin": "^9.8.0",
     "next": "latest",
-    "react": "18.2.1",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
     "react-currency-formatter": "^1.1.0",
-    "react-dom": "18.2.1",
     "react-redux": "7.2.2",
     "react-responsive-carousel": "3.2.18"
   },
@@ -28,5 +28,5 @@
     "postcss": "^8.2.15",
     "tailwindcss": "^2.1.2"
   },
-  "homepage": "./out"
+  "homepage": "."
 }
